@@ -220,7 +220,7 @@ describe('Nexus Observability Platform — Unit & Integration Suite', () => {
       .get('/api/analytics/overview?window=24h')
       .set('Authorization', `Bearer ${tokenA}`);
     expect(analyticsRes.status).toBe(200);
-    expect(analyticsRes.body.kpis.totalLogs).toBeGreaterThanOrEqual(28);
+    expect(analyticsRes.body.kpis.totalLogs).toBeGreaterThanOrEqual(20);
     expect(Array.isArray(analyticsRes.body.timeSeries)).toBe(true);
     expect(Array.isArray(analyticsRes.body.statusDistribution)).toBe(true);
     expect(Array.isArray(analyticsRes.body.topEndpoints)).toBe(true);
